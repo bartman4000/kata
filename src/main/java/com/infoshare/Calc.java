@@ -17,10 +17,11 @@ public class Calc {
         List<String> inputStringArray =  Arrays.asList(input.split("([^\\d-])+"));
         List<Integer> numbers = inputStringArray.stream()
                 .map(Integer::parseInt)
+                .filter(integer -> integer <= 1000)
                 .collect(Collectors.toList());
         for (Integer number : numbers)
             if (number < 0) throw new IllegalArgumentException();
-            else  result = result+number;
+            else result = result+number;
         return result;
     }
 }
