@@ -18,7 +18,9 @@ public class Calc {
         List<Integer> numbers = inputStringArray.stream()
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
-        for (Integer number : numbers) result = result+number;
+        for (Integer number : numbers)
+            if (number < 0) throw new IllegalArgumentException();
+            else  result = result+number;
         return result;
     }
 }
