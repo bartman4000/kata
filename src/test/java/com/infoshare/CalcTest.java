@@ -63,4 +63,15 @@ public class CalcTest {
 //        Then
         assertEquals(6,result1);
     }
+    @Test
+
+    public void inputWithEmptySpaceDelimiter() {
+//        Given
+        String input = "1 2 3";
+//        When
+        int result1 = calc.add(input);
+//        Then
+        assertEquals(6,result1);
+    }
+
 }
