@@ -82,4 +82,14 @@ public class CalcTest {
         int result = calc.add(input);
     }
 
+    @Test
+    public void ignoreOvetThousandNumbers() {
+//        Given
+        String input = "1,1003,3";
+//        When
+        int result1 = calc.add(input);
+//        Then
+        assertEquals(4,result1);
+    }
+
 }
