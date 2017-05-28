@@ -14,7 +14,7 @@ public class Calc {
         if (input.isEmpty()) return 0;
 
         int result = 0;
-        List<String> inputStringArray =  Arrays.asList(input.split(",|\n"));
+        List<String> inputStringArray =  Arrays.asList(input.split("([^\\d-])+"));
         List<Integer> numbers = inputStringArray.stream()
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
