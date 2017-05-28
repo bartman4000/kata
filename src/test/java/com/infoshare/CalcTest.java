@@ -41,5 +41,18 @@ public class CalcTest {
         assertEquals(-1,result2);
     }
 
+    @Test
+    public void fewStringNumbersInput() {
+//        Given
+        String input1 = "1,2,1,2";
+        String input2 = "0,-1,0,-1,1,1";
+//        When
+        int result1 = calc.add(input1);
+        int result2 = calc.add(input2);
+//        Then
+        assertEquals(6,result1);
+        assertEquals(0,result2);
+    }
+
 
 }
