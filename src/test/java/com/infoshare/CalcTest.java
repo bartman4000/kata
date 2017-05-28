@@ -3,9 +3,7 @@ package com.infoshare;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 /**
  * Created by bartman3000 on 28.05.17.
@@ -20,19 +18,28 @@ public class CalcTest {
     }
 
     @Test
-    public void should_return_3_for_1_and_2() {
-        assertEquals(3, calc.Add("1,2"));
+    public void emptyInput() {
+//        Given
+        String input = "";
+//        When
+        int result = calc.add(input);
+//        Then
+        int expected = 0;
+        assertEquals(result, expected);
     }
 
-//    @Test
-//    public void should_return_0_for_empty_string() {
-//        assertEquals(0, calc.Add());
-//    }
-//
-//    @Test
-//    public void should_count_any_numbers() {
-//        assertEquals(16, calc.Add("2,3,4,7"));
-//    }
+    @Test
+    public void twoStringNumbersInput() {
+//        Given
+        String input1 = "1,2";
+        String input2 = "0,-1";
+//        When
+        int result1 = calc.add(input1);
+        int result2 = calc.add(input2);
+//        Then
+        assertEquals(3,result1);
+        assertEquals(-1,result2);
+    }
 
 
 }
