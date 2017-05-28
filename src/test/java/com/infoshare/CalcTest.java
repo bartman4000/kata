@@ -92,4 +92,24 @@ public class CalcTest {
         assertEquals(4,result1);
     }
 
+    @Test
+    public void delimiterCanHaveManySigns() {
+//        Given
+        String input = "1      3";
+//        When
+        int result = calc.add(input);
+//        Then
+        assertEquals(4,result);
+    }
+
+    @Test
+    public void delimiterCanHaveDifferentSigns() {
+//        Given
+        String input = "1  ,;_    3";
+//        When
+        int result = calc.add(input);
+//        Then
+        assertEquals(4,result);
+    }
+
 }
