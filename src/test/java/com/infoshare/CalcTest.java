@@ -54,5 +54,13 @@ public class CalcTest {
         assertEquals(0,result2);
     }
 
-
+    @Test
+    public void inputWithNewLineSplit() {
+//        Given
+        String input = "1\n2\n3";
+//        When
+        int result1 = calc.add(input);
+//        Then
+        assertEquals(6,result1);
+    }
 }
