@@ -3,6 +3,9 @@ package com.infoshare;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 /**
@@ -33,5 +36,25 @@ public class AnagramTest {
         //given
         String[] check= {"tak","kat","dom"};
         assertTrue(anagram.check(check));
+    }
+
+    @Test
+    public void checkGetAnagrams() throws Exception {
+        //given
+        String[] check= {"tak","kat","dom"};
+
+        String[] row1 = new String[2];
+        row1[0] = "kat";
+        row1[1] = "kat";
+
+        String[] row2 = new String[2];
+        row2[0] = "akt";
+        row2[1] = "dom";
+
+        Map<String, String[]> mapa = new HashMap<>();
+        mapa.put("akt", row1);
+        mapa.put("kat", row2);
+
+        assertFalse(anagram.check(check));
     }
 }

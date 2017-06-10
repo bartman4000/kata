@@ -48,6 +48,19 @@ public class Anagram {
         return false;
     }
 
+    /*String[] row1 = new String[2];
+    row1[0] = "kat";
+    row1[1] = "kat";
+
+    String[] row2 = new String[2];
+    row2[0] = "akt";
+    row2[1] = "dom";
+
+    Map<String, String[]> mapa = new HashMap<>();
+       mapa.put("akt", row1);
+       mapa.put("kat", row2);*/
+
+
 }
 
 
