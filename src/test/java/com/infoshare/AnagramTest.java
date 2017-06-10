@@ -19,7 +19,7 @@ public class AnagramTest {
     //check('kat',	'akt')
     @Test
     public void checkTrue() throws Exception {
-        assertTrue(anagram.check("kat","tak"));
+        assertTrue(anagram.check("kat","akt"));
     }
 
     //check('dom',	'moce')
@@ -29,10 +29,9 @@ public class AnagramTest {
     }
 
     @Test
-    //given
-    String[] check= {"akt","kat","dom"};
-
     public void checkTabletrue() throws Exception {
-        assertTrue(anagram.check(check);
+        //given
+        String[] check= {"tak","kat","dom"};
+        assertTrue(anagram.check(check));
     }
 }
