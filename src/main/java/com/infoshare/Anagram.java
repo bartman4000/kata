@@ -1,5 +1,8 @@
 package com.infoshare;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by bartman3000 on 10.06.17.
  */
@@ -8,7 +11,13 @@ public class Anagram {
 
     public Boolean check(String str1, String str2)
     {
-        if(str1.equals(new StringBuffer(str2).reverse().toString()))
+        String [] arr1 = str1.split("");
+        String [] arr2 = str2.split("");
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+
+        if(Arrays.equals(arr1, arr2))
         {
             return true;
         }
