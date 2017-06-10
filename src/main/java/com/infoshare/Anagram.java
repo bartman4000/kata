@@ -8,9 +8,11 @@ public class Anagram {
 
     public Boolean check(String str1, String str2)
     {
-        if(str1.equals(new StringBuffer(str2).reverse().toString()));
+        if(str1.equals(new StringBuffer(str2).reverse().toString()))
+        {
             return true;
 
+        }return false;
     }
 }
 
